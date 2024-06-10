@@ -1,0 +1,38 @@
+<header class="flex w-full justify-center relative mt-4">
+    <a href="/">
+        <img src="/public/logo.png" alt="logo" class="w-12"/>
+    </a>
+    <button (click)="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 absolute right-4 top-2 hover:opacity-75 hover:cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+    </button>
+</header>
+<div class="w-screen h-screen bg-gray-600 absolute top-0 overflow-x-hidden z-50" [ngStyle]="{'display':menuDisplay}">
+    <!-- menu view -->
+    <button (click)="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 absolute right-4 top-6 hover:opacity-75 hover:cursor-pointer">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+    </button>
+    <ul class="mt-52 flex flex-col gap-8">
+        <li class="text-5xl md:text-6xl indent-8 md:indent-32 lg:indent-52 text-slate-50 hover:opacity-70">
+            <a href="/">Home</a>
+        </li>
+        <li class="text-5xl md:text-6xl indent-8 md:indent-32 lg:indent-52 text-slate-50 hover:opacity-70">
+            <a href="/account">Account</a>
+        </li>
+        <li class="text-5xl md:text-6xl indent-8 md:indent-32 lg:indent-52 text-slate-50 hover:opacity-70">
+            <a href="/catalog">Catalog</a>
+        </li>
+        <li class="text-5xl md:text-6xl indent-8 md:indent-32 lg:indent-52 text-slate-50 hover:opacity-70">
+            <a href="/community">Community Playlists</a>
+        </li>
+        <li class="text-5xl md:text-6xl indent-8 md:indent-32 lg:indent-52 text-slate-50 hover:opacity-70">
+            <a href="/daily">Daily Recommended</a>
+        </li>
+        <li class="text-5xl md:text-6xl indent-8 md:indent-32 lg:indent-52 text-slate-50 hover:opacity-70">
+            <a href="/help">Help</a>
+        </li>
+    </ul>
+</div>
